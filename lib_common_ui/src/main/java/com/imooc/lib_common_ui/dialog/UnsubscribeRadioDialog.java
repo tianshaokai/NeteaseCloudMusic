@@ -1,7 +1,7 @@
 package com.imooc.lib_common_ui.dialog;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.View;
 
 import com.imooc.lib_common_ui.R;

@@ -2,10 +2,10 @@ package com.imooc.imooc_voice.view.discory;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -21,13 +21,10 @@ import com.imooc.imooc_voice.api.RequestCenter;
 import com.imooc.imooc_voice.model.newapi.AlbumOrSongBean;
 import com.imooc.imooc_voice.model.newapi.BannerBean;
 import com.imooc.imooc_voice.model.newapi.DailyRecommendBean;
-import com.imooc.imooc_voice.model.newapi.LoginBean;
 import com.imooc.imooc_voice.model.newapi.MainRecommendPlayListBean;
 import com.imooc.imooc_voice.model.newapi.NewSongBean;
 import com.imooc.imooc_voice.model.newapi.search.AlbumSearchBean;
-import com.imooc.imooc_voice.util.GsonUtil;
 import com.imooc.imooc_voice.util.SearchUtil;
-import com.imooc.imooc_voice.util.SharePreferenceUtil;
 import com.imooc.imooc_voice.view.discory.album.NewAlbumDelegate;
 import com.imooc.imooc_voice.view.discory.daily.DailyRecommendDelegate;
 import com.imooc.imooc_voice.view.discory.radio.RadioDelegate;
@@ -36,12 +33,11 @@ import com.imooc.imooc_voice.view.discory.square.GedanSquareDelegate;
 import com.imooc.imooc_voice.view.discory.square.detail.SongListDetailDelegate;
 import com.imooc.lib_common_ui.bannder.BannerCreator;
 import com.imooc.lib_common_ui.delegate.NeteaseDelegate;
-import com.imooc.lib_common_ui.delegate.web.WebDelegateImpl;
 import com.imooc.lib_image_loader.app.ImageLoaderManager;
 import com.imooc.lib_network.exception.OkHttpException;
 import com.imooc.lib_network.listener.DisposeDataListener;
 
-import java.lang.reflect.InvocationTargetException;
+import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -160,8 +156,13 @@ public class DiscoverDelegate extends NeteaseDelegate {
 
 			@Override
 			public void onFailure(Object reasonObj) {
-				OkHttpException exception = (OkHttpException) reasonObj;
-				Log.e(TAG, exception.getEmsg().toString());
+				if (reasonObj instanceof SocketTimeoutException) {
+					SocketTimeoutException exception = (SocketTimeoutException) reasonObj;
+					Log.e(TAG, exception.getMessage());
+				} else if(reasonObj instanceof OkHttpException) {
+					OkHttpException exception = (OkHttpException) reasonObj;
+					Log.e(TAG, exception.getEmsg().toString());
+				}
 			}
 		});
 		/*

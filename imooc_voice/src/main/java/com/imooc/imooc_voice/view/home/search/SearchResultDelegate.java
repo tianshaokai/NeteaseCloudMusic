@@ -2,13 +2,10 @@ package com.imooc.imooc_voice.view.home.search;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.viewpager.widget.ViewPager;
+
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -19,7 +16,6 @@ import android.widget.TextView;
 import com.imooc.imooc_voice.R;
 import com.imooc.imooc_voice.R2;
 import com.imooc.imooc_voice.model.event.KeywordsEvent;
-import com.imooc.imooc_voice.util.ScreenUtils;
 import com.imooc.imooc_voice.view.home.search.sort.AlbumSearchDelegate;
 import com.imooc.imooc_voice.view.home.search.sort.MultipleSearchDelegate;
 import com.imooc.imooc_voice.view.home.search.sort.PlayListSearchDelegate;

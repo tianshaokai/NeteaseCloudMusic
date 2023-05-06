@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
 android {
     compileSdkVersion rootProject.android.compileSdkVersion
-    buildToolsVersion rootProject.android.buildToolsVersion
 
     defaultConfig {
         applicationId rootProject.android.applicationId
@@ -28,16 +27,24 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.github.promeg:tinypinyin:2.0.3'
-    compile 'me.yokeyword:eventbus-activity-scope:1.1.0'
+    implementation 'com.github.promeg:tinypinyin:2.0.3'
+
+    implementation 'me.yokeyword:fragmentationx:1.0.2'
+    implementation 'me.yokeyword:eventbus-activity-scope:1.1.0'
+
     implementation 'com.lxj:xpopup:1.8.10'
-    annotationProcessor'com.jakewharton:butterknife-compiler:8.6.0'
-    compile 'com.android.support:multidex:1.0.1'
-    compile 'pub.devrel:easypermissions:1.0.1'
-    compile 'com.android.support:cardview-v7:25.3.1'
+
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
+
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor'com.jakewharton:butterknife-compiler:10.2.1'
+
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
     //视频播放
     implementation 'cn.jzvd:jiaozivideoplayer:7.2.4'
-    compile ('com.github.niorgai:StatusBarCompat:2.1.4', {
+    implementation ('com.github.niorgai:StatusBarCompat:2.1.4', {
         exclude group: 'com.android.support'
     })
     //RecyclerView 多布局分组Adapter

@@ -1,16 +1,11 @@
 package com.imooc.imooc_voice.view.discory.radio;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.view.View;
 
-import com.imooc.imooc_voice.api.RequestCenter;
-import com.imooc.imooc_voice.model.newapi.dj.DjTopListBean;
 import com.imooc.lib_common_ui.delegate.NeteaseDelegate;
-import com.imooc.lib_network.listener.DisposeDataListener;
-
-import java.util.List;
 
 public class RadioRankDelegate extends NeteaseDelegate {
 

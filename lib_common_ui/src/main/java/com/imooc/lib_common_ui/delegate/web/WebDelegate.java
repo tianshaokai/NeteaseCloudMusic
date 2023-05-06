@@ -2,7 +2,7 @@ package com.imooc.lib_common_ui.delegate.web;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.webkit.WebView;
 
 

@@ -2,7 +2,7 @@ package com.imooc.imooc_voice.view.home.search;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.TextView;

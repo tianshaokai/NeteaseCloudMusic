@@ -72,7 +72,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:text="我订阅的电台(0)"/>
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_mine_sub_radio"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

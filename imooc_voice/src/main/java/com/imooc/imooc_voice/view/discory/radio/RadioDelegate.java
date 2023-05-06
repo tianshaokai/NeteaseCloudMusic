@@ -2,10 +2,10 @@ package com.imooc.imooc_voice.view.discory.radio;
 
 import android.annotation.SuppressLint;
 import android.os.AsyncTask;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -19,8 +19,6 @@ import com.imooc.imooc_voice.model.newapi.DjBannerBean;
 import com.imooc.imooc_voice.model.newapi.dj.DjRecommendBean;
 import com.imooc.imooc_voice.view.discory.radio.detail.RadioDetailDelegate;
 import com.imooc.imooc_voice.view.discory.radio.pay.RadioPayDelegate;
-import com.imooc.imooc_voice.view.discory.radio.rank.DjRankDelegate;
-import com.imooc.imooc_voice.view.discory.radio.rank.ProgramRankDelegate;
 import com.imooc.imooc_voice.view.discory.radio.rank.RankDelegate;
 import com.imooc.lib_common_ui.bannder.BannerCreator;
 import com.imooc.lib_common_ui.delegate.NeteaseLoadingDelegate;

@@ -3,18 +3,18 @@ package com.imooc.lib_common_ui.delegate;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 
 import com.imooc.lib_common_ui.base.ProxyActivity;
-
-import org.greenrobot.eventbus.EventBus;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -51,6 +51,7 @@ public abstract class BaseDelegate extends Fragment implements ISupportFragment 
         super.onCreate(savedInstanceState);
         DELEGATE.onCreate(savedInstanceState);
     }
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -67,11 +68,11 @@ public abstract class BaseDelegate extends Fragment implements ISupportFragment 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View rootView;
-        if(setLayout() instanceof Integer){
-            rootView = inflater.inflate((Integer) setLayout(), container,false);
-        }else if(setLayout() instanceof View){
+        if (setLayout() instanceof Integer) {
+            rootView = inflater.inflate((Integer) setLayout(), container, false);
+        } else if (setLayout() instanceof View) {
             rootView = (View) setLayout();
-        }else{
+        } else {
             throw new ClassCastException("setLayout() must be int or View");
         }
         mUnbinder = ButterKnife.bind(this, rootView);
@@ -82,7 +83,6 @@ public abstract class BaseDelegate extends Fragment implements ISupportFragment 
         }
         return rootView;
     }
-
 
 
     public final ProxyActivity getProxyActivity() {

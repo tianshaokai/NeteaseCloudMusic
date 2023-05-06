@@ -1,10 +1,10 @@
 package com.imooc.imooc_voice.view.mine.local.music;
 
 import android.annotation.SuppressLint;
-import android.os.AsyncTask;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;

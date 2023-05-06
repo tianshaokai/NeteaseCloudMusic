@@ -1,6 +1,6 @@
 package com.imooc.lib_common_ui.appbar;
 
-import android.support.design.widget.AppBarLayout;
+import com.google.android.material.appbar.AppBarLayout;
 
 /**
  * AppBarLayout的监听类

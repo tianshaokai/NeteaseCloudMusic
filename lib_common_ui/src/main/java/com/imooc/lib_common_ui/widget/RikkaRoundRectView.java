@@ -5,7 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Path;
 import android.graphics.RectF;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 
 import com.imooc.lib_common_ui.R;
@@ -14,7 +14,7 @@ import com.imooc.lib_common_ui.R;
 /**
  * 歌单封面的view,是一个圆角矩形
  */
-public class RikkaRoundRectView extends android.support.v7.widget.AppCompatImageView {
+public class RikkaRoundRectView extends androidx.appcompat.widget.AppCompatImageView {
 
     private float roundRatio = 16f;
     private Path path;

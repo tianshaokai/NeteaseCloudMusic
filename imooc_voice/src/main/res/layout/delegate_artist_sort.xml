@@ -106,7 +106,7 @@
         android:textSize="12sp"
         android:text="热门歌手"
         android:background="#F4F4F4"/>
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_artist_sort"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

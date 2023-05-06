@@ -1,8 +1,8 @@
 package com.imooc.lib_common_ui.dialog;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.AppCompatButton;
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatButton;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;

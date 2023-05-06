@@ -2,9 +2,10 @@ package com.imooc.lib_common_ui.navigator;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import androidx.viewpager.widget.ViewPager;
 
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNavigatorAdapter;

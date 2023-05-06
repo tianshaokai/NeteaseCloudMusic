@@ -23,28 +23,30 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation this.rootProject.depsLibs.magicindicator
-    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
-    implementation 'com.android.support:recyclerview-v7:25.4.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
     compileOnly this.rootProject.depsLibs.appcompat
     compileOnly 'com.github.donkingliang:GroupedRecyclerViewAdapter:1.3.7'
     implementation this.rootProject.depsLibs.eventbus
-    compile 'me.yokeyword:eventbus-activity-scope:1.1.0'
-    compile 'com.android.support:support-v4:25.3.1'
+    implementation 'me.yokeyword:eventbus-activity-scope:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     //compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:design:27.1.1'
-    compile 'com.android.support:multidex:1.0.1'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.multidex:multidex:2.0.0'
     //Fragmentation依赖
-    compile 'me.yokeyword:fragmentation:1.2.4'
+    implementation 'me.yokeyword:fragmentationx:1.0.2'
     // Swipeback is based on fragmentation. Refer to SwipeBackActivity/Fragment for your Customized SupportActivity/Fragment
-    compile 'me.yokeyword:fragmentation-swipeback:1.2.4'
+    implementation 'me.yokeyword:fragmentationx-swipeback:1.0.2'
     //Banner依赖
-    compile 'com.bigkoo:convenientbanner:2.0.5'
-    compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
+    implementation 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
     implementation rootProject.depsLibs.glide
     //ButterKnife依赖
-    compile 'com.jakewharton:butterknife:8.4.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
 
     implementation 'com.lxj:xpopup:1.8.10'
     compileOnly project(':lib_image_loader')
+
+    implementation 'androidx.viewpager:viewpager:1.0.0'
 }

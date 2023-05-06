@@ -2,8 +2,8 @@ package com.imooc.imooc_voice;
 
 import android.Manifest;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBar;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 
 import com.imooc.imooc_voice.view.login.SplashDelegate;
 import com.imooc.lib_common_ui.app.Netease;
